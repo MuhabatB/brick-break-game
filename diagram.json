@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "author": "Muhabat Baltayeva",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -76.2, "left": -115.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -176.4,
+      "left": 426.2,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": -186, "left": 195.8, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led3", "top": -186, "left": 311, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 177.8,
+      "left": 123.8,
+      "attrs": { "travelLength": "30" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 3.14,
+      "left": 355.43,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-7segment", "id": "sevseg1", "top": 24.18, "left": 254.68, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 204.8,
+      "left": -172,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": 133.8,
+      "left": 408.6,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "led3:A", "uno:6", "green", [ "v28.8", "h-220.8" ] ],
+    [ "led2:C", "uno:GND.1", "green", [ "v9.6", "h-182" ] ],
+    [ "led2:A", "uno:5", "green", [ "v19.2", "h-96" ] ],
+    [ "led3:C", "uno:GND.1", "green", [ "v9.6", "h-326" ] ],
+    [ "led1:C", "uno:GND.1", "green", [ "v0", "h-441.2" ] ],
+    [ "led1:A", "uno:4", "green", [ "v28.8", "h-355.2" ] ],
+    [ "sevseg1:A", "uno:7", "green", [ "v-143.16", "h-211.2" ] ],
+    [ "sevseg1:B", "uno:2", "green", [ "v-114.36", "h-172.8" ] ],
+    [ "sevseg1:COM.1", "uno:5V", "green", [ "h0", "v38.4", "h-230.4" ] ],
+    [ "sevseg1:C", "uno:11", "green", [ "v19.2", "h-105.6", "v-278.4", "h-153.6" ] ],
+    [ "oled1:SDA", "uno:A4", "green", [ "v-86.4", "h-230.33", "v220.8", "h-57.6" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v-76.8", "h-210.9", "v192", "h-57.6" ] ],
+    [ "oled1:VCC", "uno:5V", "red", [ "v-67.2", "h-191.85", "v211.2", "h-163.2" ] ],
+    [ "oled1:GND", "uno:GND.2", "black", [ "v-57.6", "h-172.8", "v211.2", "h-163.2" ] ],
+    [ "ldr1:VCC", "uno:5V", "red", [ "h9.6", "v-19.2", "h-38.4" ] ],
+    [ "ldr1:GND", "uno:GND.3", "black", [ "h19.2", "v-38.8", "h-28.8" ] ],
+    [ "ldr1:AO", "uno:A1", "green", [ "h9.6", "v-106.3", "h86.4" ] ],
+    [ "joystick1:VCC", "uno:5V", "red", [ "v28.8", "h-393.6" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "h220.8", "v-48", "h-297.6" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "h211.2", "v-58.4", "h-240" ] ],
+    [ "joystick1:VERT", "uno:A2", "green", [ "v19.2", "h-96", "v-124.8", "h-249.6" ] ],
+    [ "joystick1:GND", "uno:GND.3", "black", [ "v48", "h-412.8" ] ],
+    [ "joystick1:HORZ", "uno:A3", "green", [ "v38.4", "h-96", "v-124.8" ] ],
+    [ "sevseg1:G", "uno:13", "green", [ "v-152.76", "h-249.6" ] ],
+    [ "sevseg1:F", "uno:12", "green", [ "v-143.16", "h-249.6" ] ],
+    [ "sevseg1:D", "uno:10", "green", [ "v9.6", "h-38.4", "v-201.6", "h-192" ] ],
+    [ "sevseg1:E", "uno:9", "green", [ "v0", "h-86.4", "v-240", "h-124.8" ] ]
+  ],
+  "dependencies": {}
+}
